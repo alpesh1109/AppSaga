@@ -13,6 +13,7 @@ class CounterButton extends React.PureComponent {
     this.props.logoutAction();
   }
   render() {
+    console.log('render');
     // const { ldata } = this.props;
     // alert(JSON.stringify(ldata));
     return (
@@ -20,7 +21,7 @@ class CounterButton extends React.PureComponent {
         <button class="btn btn-primary" style={{ marginLeft: '10%', marginTop: "10%" }}
           color={this.props.color}
           onClick={() => this.setState(state => ({ count: state.count + 1 }))}>
-          Count: {this.state.count}
+          Count : {this.state.count}
         </button>
         <button type="submit" class="btn btn-danger" style={{ marginLeft: '1%', marginTop: "10%" }} onClick={() => this.logout()}>Logout</button>
       </React.Fragment>
